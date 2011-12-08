@@ -3,44 +3,49 @@
   Formatting applies to all frontend.
 */
 
+body {
+}
+
+@font-face {
+  font-family: 'Chunkfive';
+  src: url('./Chunkfive-webfont.eot');
+  src: url('./Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./Chunkfive-webfont.woff') format('woff'),
+       url('./Chunkfive-webfont.ttf') format('truetype'),
+       url('./Chunkfive-webfont.svg#Chunkfive') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#logo {
+}
+#logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 #logo a span {
-  font-size: 105px;
-  color: #444;
-  opacity: 1;
-  text-shadow: 0px 0px 2px #444, 1px 1px 4px rgba(0,0,0,0.7);
-  mask-image: url(../images/mask2.png);
-  transition: all 0.3s linear;
-  animation: sharpen 0.6s linear backwards;
+  font: 60px/68px 'Chunkfive', Arial, sans-serif;
+  letter-spacing: 0;
+  color: #e65540;
 }
 
 #logo a span:hover {
-  color: #3f7f75;
+  color: black;
 }
 
-#logo a span:nth-child(1) {
-  animation-delay: 1.2s;
+#menu {
+  float: right;
 }
-#logo a span:nth-child(2) {
-  animation-delay: 0.1s;
-}
-#logo a span:nth-child(3) {
-  animation-delay: 1s;
-} 
 
-@keyframes sharpen {
-  0% {
-    opacity: 0;
-    text-shadow: 0px 0px 100px #444;
-    color: transparent;
-  }
-  90% {
-    opacity: 0.9;
-    text-shadow: 0px 0px 10px #444;
-    color: transparent;
-  }
-  100% {
-    color: #444;
-    opacity: 1;
-    text-shadow: 0px 0px 2px #444, 1px 1px 4px rgba(0,0,0,0.7);
-  }
+#menu ul li a {
+color: #494949;
+font-weight: bold;
+text-transform: uppercase;
+display: block;
+font-size: 14px;
+line-height: 21px;
+height: 21px;
+text-decoration: none;
 }
+
