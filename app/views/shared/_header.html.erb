@@ -1,0 +1,15 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="javascripts/jquery.lettering-0.6.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#logo a").lettering();
+  });
+</script>
+<h1 id="logo">
+  <%= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %>
+</h1>
+
+<%= render(:partial => "/shared/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>

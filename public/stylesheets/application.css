@@ -2,3 +2,45 @@
   Override default refinery application CSS below.
   Formatting applies to all frontend.
 */
+
+#logo a span {
+  font-size: 105px;
+  color: #444;
+  opacity: 1;
+  text-shadow: 0px 0px 2px #444, 1px 1px 4px rgba(0,0,0,0.7);
+  mask-image: url(../images/mask2.png);
+  transition: all 0.3s linear;
+  animation: sharpen 0.6s linear backwards;
+}
+
+#logo a span:hover {
+  color: #3f7f75;
+}
+
+#logo a span:nth-child(1) {
+  animation-delay: 1.2s;
+}
+#logo a span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#logo a span:nth-child(3) {
+  animation-delay: 1s;
+} 
+
+@keyframes sharpen {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 100px #444;
+    color: transparent;
+  }
+  90% {
+    opacity: 0.9;
+    text-shadow: 0px 0px 10px #444;
+    color: transparent;
+  }
+  100% {
+    color: #444;
+    opacity: 1;
+    text-shadow: 0px 0px 2px #444, 1px 1px 4px rgba(0,0,0,0.7);
+  }
+}
