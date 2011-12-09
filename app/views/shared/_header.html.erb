@@ -1,15 +1,30 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="javascripts/jquery.lettering-0.6.min.js"></script>
+<script src="/javascripts/jquery.lettering-0.6.min.js"></script>
 <script>
   $(document).ready(function() {
     $("#logo a").lettering();
   });
 </script>
-<h1 id="logo">
-  <%= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %>
-</h1>
+<div id="top-header">
+  <div id="logo">
+    <h1><%= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %></h1>
+  </div>
+  
+  <div id="contact">
+    <address>
+      <a href="http://maps.google.com/maps?q=2242+Martin+Luther+King+Jr+Way,+Berkeley,+CA&hl=en&ll=37.866917,-122.272628&spn=0.011892,0.022724&sll=37.0625,-95.677068&sspn=45.553578,93.076172&vpsrc=6&t=w&hnear=2242+Martin+Luther+King+Jr+Way,+Berkeley,+California+94704&z=16">
+        2242 Martin Luther King Jr Way<br />
+      Berkeley, CA 94704
+      </a>
+    </address>
+  </div>
+</div>
 
-<%= render(:partial => "/shared/menu", :locals => {
+<br class="clear">
+
+<%# render(:partial => "/shared/menu", :locals => {
              :dom_id => 'menu',
              :css => 'menu'
            }) %>
+
+

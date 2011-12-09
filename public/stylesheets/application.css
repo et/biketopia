@@ -3,7 +3,11 @@
   Formatting applies to all frontend.
 */
 
+html { height: 100%; }
+
 body {
+  background-color: #cc0000;
+  height: 100%;
 }
 
 @font-face {
@@ -17,35 +21,102 @@ body {
   font-style: normal;
 }
 
-#logo {
-}
-#logo a {
-  text-decoration: none;
-  text-transform: uppercase;
+@font-face {
+  font-family: 'DroidSans';
+  src: url('./DroidSans-webfont.eot');
+  src: url('./DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./DroidSans-webfont.woff') format('woff'),
+       url('./DroidSans-webfont.ttf') format('truetype'),
+       url('./DroidSans-webfont.svg#DroidSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-#logo a span {
-  font: 60px/68px 'Chunkfive', Arial, sans-serif;
-  letter-spacing: 0;
-  color: #e65540;
+@font-face {
+  font-family: 'DroidSans-Bold';
+  src: url('./DroidSans-Bold-webfont.eot');
+  src: url('./DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./DroidSans-Bold-webfont.woff') format('woff'),
+       url('./DroidSans-Bold-webfont.ttf') format('truetype'),
+       url('./DroidSans-Bold-webfont.svg#DroidSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
+
+#page_container {
+  margin-top: 5px;
+  height: 100%;
+  background-image: url(../images/broken_noise.png);
+}
+
+#page_container > header {
+  color: #e7e8e3;
+}
+
+
+section {
+  background-color: #f0f0f0;
+  color: #e7e8e3;
+  height: 100%;
+}
+
+
+#logo {
+  float: left;
+}
+
+#logo h1 { margin: 0; margin-top: 0.3em; text-align: center; }
+
+#logo h1 {
+  text-transform: uppercase;
+  font-family: 'Chunkfive', Arial, sans-serif;
+}
+
+#logo h1 { font-size: 60px; }
+
+#logo a { text-decoration: none; }
+
+#logo a span { color: #e7e8e3; }
 
 #logo a span:hover {
   color: black;
 }
 
-#menu {
+#contact {
+  margin-top: 1.3em;
   float: right;
+  text-align: right;
 }
 
-#menu ul li a {
-color: #494949;
-font-weight: bold;
-text-transform: uppercase;
-display: block;
-font-size: 14px;
-line-height: 21px;
-height: 21px;
-text-decoration: none;
+#contact address {
+  text-transform: uppercase;
+  font: 20px/24px 'Chunkfive', Arial, sans-serif;
+}
+
+#contact address a {
+  color: #e7e8e3;
+  text-decoration: none;
+}
+
+section#page {
+  width: 100%;
+}
+
+section#page h1 {
+  font-size: 25px;
+  border-bottom: dotted 1px #ccc;
+  font-family: DroidSans-Bold, Arial, sans-serif;
+}
+
+section#page p { font-family: DroidSans, Arial, sans-serif; }
+
+section#page h1, p { color: #362c32; }
+
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
 }
 
