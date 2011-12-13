@@ -101,24 +101,24 @@ body {
 }
 
 section#page {
-  height: 100%;
   width: 100%;
+  border-top: 1px solid #5e7c88;
+}
+
+section#body_content {
   background: url(../images/bicycle_boulevard.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding-top: 20px;
-  padding-left: 100px;
-  border-top: 1px solid #5e7c88;
+  padding: 20px 0 20px 100px;
 }
 
 section#page h1, p {
   margin: 0;
   padding: 10px 15px;
-  background-color: rgba(54,63,69,0.7);
+  background-color: rgba(54,63,69,0.9);
 }
-
 
 section#page h1 {
   font-size: 3.4em;
