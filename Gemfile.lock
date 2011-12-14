@@ -46,9 +46,6 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eventmachine (0.12.10)
-    foreman (0.27.0)
-      term-ansicolor (~> 1.0.5)
-      thor (>= 0.13.6)
     friendly_id_globalize3 (3.2.1.5)
       babosa (~> 0.3.0)
     globalize3 (0.1.0)
@@ -181,7 +178,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  foreman
   heroku
   pg
   refinerycms (~> 1.0.9)
