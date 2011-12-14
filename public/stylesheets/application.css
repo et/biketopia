@@ -3,11 +3,10 @@
   Formatting applies to all frontend.
 */
 
-html { height: 100%; }
-
 body {
-  background-color: #5e7c88;
-  height: 100%;
+  background-image: url(../images/broken_noise.png);
+  width: 100%;
+  font: 13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;
 }
 
 ::selection {
@@ -16,9 +15,6 @@ body {
 ::-moz-selection {
   background: #cc0000; /* Firefox */
 }
-
-
-
 
 @font-face {
   font-family: 'Chunkfive';
@@ -53,17 +49,9 @@ body {
   font-style: normal;
 }
 
-#page_container {
-  margin-top: 5px;
-  height: 100%;
-  background-image: url(../images/broken_noise.png);
-}
+#logo { float: left; }
 
-#logo {
-  float: left;
-}
-
-#logo h1 { margin: 0; margin-top: 0.3em; text-align: center; }
+#logo h1 { margin: 0.3em 0 0 2.3em; }
 
 #logo h1 {
   text-transform: uppercase;
@@ -76,12 +64,11 @@ body {
 
 #logo a span { color: #e7e8e3; }
 
-#logo a span:hover {
-  color: #feb41c;
-}
+#logo a span:hover { color: #feb41c; }
 
 #contact {
-  margin-top: 1.3em;
+  margin-top: 3.0em;
+  margin-right: 7.3em;
   float: right;
   text-align: right;
 }
@@ -102,38 +89,54 @@ body {
 
 section#page {
   width: 100%;
-  border-top: 1px solid #5e7c88;
-}
-
-section#body_top {
-  background: url(../images/bicycle_boulevard.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding: 20px 0 20px 100px;
-}
-
-section#body_top h1, section#body_top p {
-  margin: 0;
-  padding: 10px 15px;
-  background-color: rgba(54,63,69,0.9);
 }
 
 section#page h1 {
   font-size: 3.4em;
   color: white;
   font-family: DroidSans-Bold, Arial, sans-serif;
-  max-width: 250px;
+  max-width: 200px;
   color: #feb41c;
 }
 
 section#page p {
   font-size: 1em;
-  font-family: DroidSans, Arial, sans-serif;
-  max-width: 400px;
+  #font-family: DroidSans, Arial, sans-serif;
   text-align: justify;
   color: #bdbdbd;
+}
+
+section#body_top {
+  background: url(../images/bicycle_boulevard.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 20px 0 20px 200px;
+  border-bottom: 1px solid #3f3f3f;
+  border-top: 1px solid #3f3f3f;
+}
+
+section#body_top p {
+  max-width: 400px;
+}
+
+section#body_top h1, section#body_top p {
+  margin: 0;
+  padding: 5px 10px;
+  background-color: rgba(54,63,69,0.8);
+}
+
+section#body_bottom {
+  border-top: 1px solid #3f3f3f;
+  height: 100%;
+  margin: 0 auto;
+}
+
+section#body_content_bottom {
+  padding: 15px;
+  width: 400px;
+  margin: 0 auto;
 }
 
 .clear {
