@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'refinerycms-news', '~> 1.2'
 gem 'heroku'
-gem 'foreman'
 
 group :production do
   gem 'pg'
