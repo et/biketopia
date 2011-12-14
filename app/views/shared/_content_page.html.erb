@@ -5,7 +5,7 @@
   # if 'sections' is passed in as a local_assigns, all of this is ignored.
   if local_assigns[:sections].blank?
     # always have a title
-    sections = [{:yield => :body_content_title, :fallback => page_title, :title => true}]
+    sections = []
 
     # append sections from this page.
     @page.parts.inject(sections) do |s, part|
@@ -13,8 +13,8 @@
       # these map to 'body' and 'side_body' fields in default Refinery.
       section = {:fallback => part.body}
       section[:yield] = case (title_symbol = part.title.to_s.gsub(/\ /, '').underscore.to_sym)
-        when :body then :body_content_top
-        when :side_body then :body_content_bottom
+        when :body then :body_content_left
+        when :side_body then :body_content_right
         else title_symbol
         end
 
@@ -29,8 +29,8 @@
 
     # Ensure that even without @page.parts we still have body_content_left and body_content_right
     all_yields = sections.collect{|s| s[:yield]}
-    sections << {:yield => :body_content_top} unless all_yields.include?(:body_content_top)
-    sections << {:yield => :body_content_bottom} unless all_yields.include?(:body_content_bottom)
+    sections << {:yield => :body_content_left} unless all_yields.include?(:body_content_left)
+    sections << {:yield => :body_content_right} unless all_yields.include?(:body_content_right)
   end
 
   # you can add more sections to the list using something like this:
@@ -58,17 +58,7 @@
   end
 -%>
 
-<section id='body_top'>
-  <%= raw sections.first[:html] %>
-  <%= raw sections.second[:html] %>
-</section>
-<section id='body_bottom'>
-  <%= raw sections.last[:html] %>
-</section>
-
-<!--
 <section id='body_content'<%= " class='#{css.join(' ')}'" if css.present? %>>
-  <%# raw sections.map{|section| section[:html]}.join("\n") -%>
+  <%= raw sections.map{|section| section[:html]}.join("\n") -%>
 </section>
--->
 <%= render :partial => '/shared/draft_page_message' unless @page.nil? or @page.live? -%>

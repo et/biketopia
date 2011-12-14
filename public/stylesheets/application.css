@@ -1,12 +1,13 @@
 /*
-  Override default refinery application CSS below.
-  Formatting applies to all frontend.
-*/
+Override default refinery application CSS below.
+Formatting applies to all frontend.
+ */
 
 body {
   background-image: url(../images/broken_noise.png);
   width: 100%;
   font: 13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;
+  color: #bdbdbd;
 }
 
 ::selection {
@@ -20,9 +21,9 @@ body {
   font-family: 'Chunkfive';
   src: url('./Chunkfive-webfont.eot');
   src: url('./Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
-       url('./Chunkfive-webfont.woff') format('woff'),
-       url('./Chunkfive-webfont.ttf') format('truetype'),
-       url('./Chunkfive-webfont.svg#Chunkfive') format('svg');
+  url('./Chunkfive-webfont.woff') format('woff'),
+  url('./Chunkfive-webfont.ttf') format('truetype'),
+  url('./Chunkfive-webfont.svg#Chunkfive') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,9 +32,9 @@ body {
   font-family: 'DroidSans';
   src: url('./DroidSans-webfont.eot');
   src: url('./DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-       url('./DroidSans-webfont.woff') format('woff'),
-       url('./DroidSans-webfont.ttf') format('truetype'),
-       url('./DroidSans-webfont.svg#DroidSans') format('svg');
+  url('./DroidSans-webfont.woff') format('woff'),
+  url('./DroidSans-webfont.ttf') format('truetype'),
+  url('./DroidSans-webfont.svg#DroidSans') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,23 +43,22 @@ body {
   font-family: 'DroidSans-Bold';
   src: url('./DroidSans-Bold-webfont.eot');
   src: url('./DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('./DroidSans-Bold-webfont.woff') format('woff'),
-       url('./DroidSans-Bold-webfont.ttf') format('truetype'),
-       url('./DroidSans-Bold-webfont.svg#DroidSans') format('svg');
+  url('./DroidSans-Bold-webfont.woff') format('woff'),
+  url('./DroidSans-Bold-webfont.ttf') format('truetype'),
+  url('./DroidSans-Bold-webfont.svg#DroidSans') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 #logo { float: left; }
 
-#logo h1 { margin: 0.3em 0 0 2.3em; }
-
 #logo h1 {
+  margin: 0 0 0 100px;
+  padding: 0;
   text-transform: uppercase;
   font-family: 'Chunkfive', Arial, sans-serif;
+  font-size: 5em;
 }
-
-#logo h1 { font-size: 60px; }
 
 #logo a { text-decoration: none; }
 
@@ -67,8 +67,7 @@ body {
 #logo a span:hover { color: #feb41c; }
 
 #contact {
-  margin-top: 3.0em;
-  margin-right: 7.3em;
+  margin: 20px 100px 0 0;
   float: right;
   text-align: right;
 }
@@ -93,51 +92,79 @@ section#page {
 
 section#page h1 {
   font-size: 3.4em;
-  color: white;
   font-family: DroidSans-Bold, Arial, sans-serif;
   max-width: 200px;
   color: #feb41c;
+}
+
+section#page h2 {
+  font-size: 1.4em;
+  color: #bf302d;
+  font-family: DroidSans-Bold, Arial, sans-serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid #24221f;
 }
 
 section#page p {
   font-size: 1em;
   #font-family: DroidSans, Arial, sans-serif;
   text-align: justify;
-  color: #bdbdbd;
 }
 
-section#body_top {
+section#top {
   background: url(../images/bicycle_boulevard.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   padding: 20px 0 20px 200px;
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 2px solid #3f3f3f;
   border-top: 1px solid #3f3f3f;
 }
 
-section#body_top p {
+section#top p {
   max-width: 400px;
 }
 
-section#body_top h1, section#body_top p {
+section#top h1, section#top p {
   margin: 0;
   padding: 5px 10px;
   background-color: rgba(54,63,69,0.8);
 }
 
-section#body_bottom {
-  border-top: 1px solid #3f3f3f;
-  height: 100%;
+section#body_content {
   margin: 0 auto;
+}
+section#body_content_left {
+  width: 700px;
+}
+section#body_content_right {
+  width: 300px;
 }
 
-section#body_content_bottom {
-  padding: 15px;
-  width: 400px;
-  margin: 0 auto;
+section#body_content_left .inner {
+  padding: 0 0 0 150px;
 }
+
+section#body_content_right .inner {
+  padding: 0 100px 0 0;
+}
+
+/*
+footer a {
+display: block;
+position: relative;
+overflow: hidden;
+}
+
+  footer a#facebook {
+  background: url(../images/icons.png) no-repeat 0 0;
+}
+
+  footer a#twitter {
+  background: url(../images/icons.png) no-repeat 0 0;
+}
+ */
 
 .clear {
   clear: both;
