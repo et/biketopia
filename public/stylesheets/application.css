@@ -20,6 +20,8 @@ body {
   color: #bdbdbd;
 }
 
+ul { list-style: none; }
+
 ::selection {
   background: #cc0000; /* Safari */
 }
@@ -98,7 +100,6 @@ nav li a {
   padding: 4px 9px;
 }
 
-ul#social-icons { list-style: none; }
 ul#social-icons li { width: 32px; height: 32px; float: left; }
 ul#social-icons li a { display: block ; text-indent: -999em; overflow: hidden; }
 ul#social-icons li#facebook { background: url(../images/facebook.png) no-repeat; }
