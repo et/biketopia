@@ -1,3 +1,14 @@
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-after: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+}
+
 /*
 Override default refinery application CSS below.
 Formatting applies to all frontend.
@@ -5,7 +16,6 @@ Formatting applies to all frontend.
 
 body {
   background-image: url(../images/broken_noise.png);
-  width: 100%;
   font: 13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;
   color: #bdbdbd;
 }
@@ -54,37 +64,45 @@ body {
 
 #logo h1 {
   margin: 0 0 0 100px;
+
   padding: 0;
   text-transform: uppercase;
   font-family: 'Chunkfive', Arial, sans-serif;
   font-size: 5em;
 }
 
-#logo a { text-decoration: none; }
+a { text-decoration: none; }
 
 #logo a span { color: #e7e8e3; }
 
 #logo a span:hover { color: #feb41c; }
 
-#contact {
-  margin: 20px 100px 0 0;
-  float: right;
-  text-align: right;
+#top-header-right, nav { margin-left: 5px; float: right; }
+
+nav { border-right: 1px dashed #595655; }
+nav li { padding: 30px 5px 10px 5px !important; }
+ul#social-icons { margin-top: 12px; }
+#top-header-right address {
+  position: absolute;
+  top: 42px;
+  font-size: 12px;
 }
 
-#contact address {
+nav li.selected, nav li:hover { background-color: #d56350; }
+
+nav li a {
   text-transform: uppercase;
-  font: 20px/24px 'Chunkfive', Arial, sans-serif;
-}
-
-#contact address a {
-  color: #e7e8e3;
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding: 4px 9px;
 }
 
-#contact address a:hover {
-  color: #feb41c;
-}
+ul#social-icons { list-style: none; }
+ul#social-icons li { width: 32px; height: 32px; float: left; }
+ul#social-icons li a { display: block ; text-indent: -999em; overflow: hidden; }
+ul#social-icons li#facebook { background: url(../images/facebook.png) no-repeat; }
+ul#social-icons li#twitter  { background: url(../images/twitter.png) no-repeat; }
 
 section#page {
   width: 100%;
@@ -132,8 +150,9 @@ section#top h1, section#top p {
   background-color: rgba(54,63,69,0.8);
 }
 
-section#body_content {
+section#body_content_left, section#body_content_right {
   margin: 0 auto;
+  margin-top: 10px;
 }
 section#body_content_left {
   width: 700px;
@@ -143,28 +162,12 @@ section#body_content_right {
 }
 
 section#body_content_left .inner {
-  padding: 0 0 0 150px;
+  padding: 0 0 0 200px;
 }
 
 section#body_content_right .inner {
-  padding: 0 100px 0 0;
+  padding: 0 0px 0 0;
 }
-
-/*
-footer a {
-display: block;
-position: relative;
-overflow: hidden;
-}
-
-  footer a#facebook {
-  background: url(../images/icons.png) no-repeat 0 0;
-}
-
-  footer a#twitter {
-  background: url(../images/icons.png) no-repeat 0 0;
-}
- */
 
 .clear {
   clear: both;
