@@ -84,9 +84,7 @@ dd {
 #logo { float: left; }
 
 #logo h1 {
-  margin: 0 0 0 100px;
-
-  padding: 0;
+  margin: 0 0 0 50px;
   text-transform: uppercase;
   font-family: 'Chunkfive', Arial, sans-serif;
   font-size: 5em;
