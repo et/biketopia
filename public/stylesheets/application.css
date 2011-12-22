@@ -21,6 +21,25 @@ body {
 }
 
 ul { list-style: none; }
+dl {
+  padding: 0.5em;
+}
+
+dt {
+  float: left;
+  clear: left;
+  text-align: right;
+  font-weight: bold;
+}
+
+dt:after {
+  content: ":";
+}
+
+dd {
+  margin: 0 0 0 90px;
+  padding 0 0 0.5em 0;
+}
 
 ::selection {
   background: #cc0000; /* Safari */
@@ -157,9 +176,6 @@ section#body_content_left, section#body_content_right {
 }
 section#body_content_left {
   width: 700px;
-}
-section#body_content_right {
-  width: 300px;
 }
 
 section#body_content_left .inner {
