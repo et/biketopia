@@ -1,0 +1,6 @@
+@mixin background-size($area) {
+  background-size: $area;
+  -webkit-background-size: $area;
+  -moz-background-size: $area;
+  -o-background-size: $area
+}

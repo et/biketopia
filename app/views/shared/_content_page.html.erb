@@ -9,12 +9,12 @@
 
     # append sections from this page.
     @page.parts.inject(sections) do |s, part|
-      # we have some default yields, body_content_left and body_content_right
+      # we have some default yields, main-content-left and main-content-right
       # these map to 'body' and 'side_body' fields in default Refinery.
       section = {:fallback => part.body}
       section[:yield] = case (title_symbol = part.title.to_s.gsub(/\ /, '').underscore.to_sym)
-        when :body then :body_content_left
-        when :side_body then :body_content_right
+        when :body then :main_content_left
+        when :side_body then :main_content_right
         else title_symbol
         end
 
@@ -27,10 +27,10 @@
       end
     end unless @page.nil? or @page.parts.blank?
 
-    # Ensure that even without @page.parts we still have body_content_left and body_content_right
+    # Ensure that even without @page.parts we still have main_content_left and main_content_right
     all_yields = sections.collect{|s| s[:yield]}
-    sections << {:yield => :body_content_left} unless all_yields.include?(:body_content_left)
-    sections << {:yield => :body_content_right} unless all_yields.include?(:body_content_right)
+    sections << {:yield => :main_content_left} unless all_yields.include?(:main_content_left)
+    sections << {:yield => :main_content_right} unless all_yields.include?(:main_content_right)
   end
 
   # you can add more sections to the list using something like this:
@@ -58,7 +58,5 @@
   end
 -%>
 
-<section id='body_content'<%= " class='#{css.join(' ')}'" if css.present? %>>
-  <%= raw sections.map{|section| section[:html]}.join("\n") -%>
-</section>
+<%= raw sections.map{|section| section[:html]}.join("\n") -%>
 <%= render :partial => '/shared/draft_page_message' unless @page.nil? or @page.live? -%>

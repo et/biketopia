@@ -1,29 +1,4 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="/javascripts/jquery.lettering-0.6.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $("#logo a").lettering();
-  });
-</script>
-<div id="top-header">
-  <div id="logo">
-    <h1><%= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %></h1>
-  </div>
-
-  <div id="top-header-right">
-    <ul id="social-icons">
-      <li id="facebook"><a href="https://www.facebook.com/BiketopiaBerkeley">Facebook</a></li>
-      <li id="twitter"><a href="https://twitter.com/#!/BiketopiaCycles">Twitter</a></li>
-    </ul>
-    <address>
-      <a href="http://g.co/maps/mue6k" target="_blank">1752 Alcatraz Street</a>
-    </address>
-  </div>
-
-  <%= render(:partial => "/shared/menu", :locals => {
-             :dom_id => 'menu',
-             :css => 'menu'
-           }) %>
-</div>
-
-<br class="clear" />
+<h1 id='logo'>
+  <%= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %>
+</h1>
+<%= render(:partial => "/shared/menu") %>

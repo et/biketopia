@@ -1,0 +1,80 @@
+//@import "background_size";
+//
+//$text-color: #bdbdbd;
+//
+//body {
+//  background-image: url(../images/broken_noise.png);
+//  font: 13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;
+//  color: $text-color;
+//}
+//
+//ul#social-icons {
+//  margin-top: 12px;
+//  li {
+//    width: 32px;
+//    height: 32px;
+//    float: left;
+//
+//    a {
+//      display: block;
+//      text-indent: -999em;
+//      overflow: hidden;
+//    }
+//
+//    #facebook { background: url(../images/facebook.png) no-repeat; }
+//    #twitter  { background: url(../images/twitter.png) no-repeat; }
+//  }
+//}
+//
+//section {
+//  &#page {
+//    width: 100%;
+//
+//    h1 {
+//      font-size: 3.4em;
+//      font-family: DroidSans-Bold, Arial, sans-serif;
+//      max-width: 200px;
+//      color: #feb41c;
+//    }
+//
+//    h2 {
+//      font-size: 1.4em;
+//      color: #bf302d;
+//      font-family: DroidSans-Bold, Arial, sans-serif;
+//      text-transform: uppercase;
+//      border-bottom: 1px solid #24221f;
+//    }
+//
+//    &#top {
+//      background: url(../images/bicycle_boulevard.png) no-repeat center center fixed;
+//      @include background-size(cover);
+//      padding: 20px 0 20px 200px;
+//      border-bottom: 2px solid #3f3f3f;
+//      border-top: 1px solid #3f3f3f;
+//
+//      p { max-width: 400px; }
+//    }
+//  }
+//}
+//
+//section#top h1, section#top p {
+//  margin: 0;
+//  padding: 5px 10px;
+//  background-color: rgba(54,63,69,0.8);
+//}
+//
+//section#body_content_left, section#body_content_right {
+//  margin: 0 auto;
+//  margin-top: 10px;
+//}
+//section#body_content_left {
+//  width: 700px;
+//}
+//
+//section#body_content_left .inner {
+//  padding: 0 0 0 200px;
+//}
+//
+//section#body_content_right .inner {
+//  padding: 0 0px 0 0;
+//}

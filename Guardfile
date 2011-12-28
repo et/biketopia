@@ -9,3 +9,8 @@ guard 'livereload' do
   watch(%r{(app/assets/.+\.js)\.coffee}) { |m| m[1] }
   watch(%r{config/locales/.+\.yml})
 end
+
+# Compass
+guard 'shell' do
+  watch (%r{^app\/stylesheets.+\.(sass|scss)}) { `bundle exec compass compile` }
+end

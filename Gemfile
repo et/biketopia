@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'refinerycms-news', '~> 1.2'
 gem 'heroku'
+gem 'compass', ">= 0.11.6"
+gem 'compass-susy-plugin'
 
 group :production do
   gem 'pg'
@@ -11,6 +13,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'guard-livereload'
+  gem 'guard-shell'
 end
 
 

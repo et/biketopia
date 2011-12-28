@@ -1,0 +1,57 @@
+// Imports -------------------------------------------------------------------
+
+@import "base";
+
+
+/* Colors ------------------------------------------------------------------*/
+
+$color-paragraph: #bdbdbd;
+$color-link-normal: #24221f;
+$color-link-hover: #3f3f3f;
+
+/* Layout ------------------------------------------------------------------*/
+
+body {
+  //background-image: image-url('broken_noise.png');
+  color: $color-paragraph;
+}
+
+a {
+  @include link-colors($color-link-normal, $color-link-hover);
+  @include hover-link;
+}
+
+#container {
+  @include container;
+  @include susy-grid-background;
+}
+
+header {
+  @include columns(12);
+  h1 {
+    @include full;
+  }
+
+  nav {
+    @include columns(7,12);
+    @include omega(7);
+
+    ul {
+      @include horizontal-list;
+    }
+  }
+}
+
+section#main-content {
+  @include columns(12);
+
+  #main_content_left {
+    @include columns(8,12);
+    @include prefix(1);
+  }
+
+  #main_content_right {
+    @include columns(3,12);
+    @include omega(3);
+  }
+}

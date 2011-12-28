@@ -1,0 +1,19 @@
+// Imports -------------------------------------------------------------------
+
+@import "susy";
+@import "compass/typography/links/hover-link";
+@import "compass/typography/links/link-colors";
+@import "compass/typography/lists/horizontal-list";
+@import "compass/typography/vertical_rhythm";
+
+// Grid ----------------------------------------------------------------------
+
+$total-cols             : 12;
+$col-width              : 4em;
+$gutter-width           : 1em;
+$side-gutter-width      : $gutter-width;
+
+$base-font-size: 14px;
+$base-line-height: 22px;
+
+@include establish-baseline;
