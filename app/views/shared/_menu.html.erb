@@ -2,12 +2,12 @@
   # Collect the root items.
   # Refinery::Menu is smart enough to remember all of the items in the original collection.
   if (roots = local_assigns[:roots] || (collection ||= @menu_pages).roots).present?
-    dom_id ||= 'menu'
-    css = [(css || 'menu'), 'clearfix'].flatten.join(' ')
+    dom_id ||= 'menu-nav'
+    css = [(css || 'menu-nav'), 'clearfix'].flatten.join(' ')
     hide_children = RefinerySetting.find_or_set(:menu_hide_children, false) if hide_children.nil?
 -%>
 <nav id='<%= dom_id %>' class='<%= css %>'>
-  <ul>
+  <ul id='main-nav'>
     <%= render :partial => '/shared/menu_branch', :collection => roots,
                :locals => {
                  :hide_children => hide_children,
@@ -15,5 +15,16 @@
                  :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
   </ul>
+  <div id='find-us'>
+    <h2>find us</h2>
+    <address>
+      <%= link_to "1752 Alcatraz Adeline\nBerkeley, CA 94704", "http://g.co/maps/mue6k", :target => :blank %>
+    </address>
+    <div id="social">
+      <%= link_to "Facebook", "https://www.facebook.com/BiketopiaBerkeley", :class => "icon-facebook", :target => :blank %>
+      <%= link_to "Twitter", "https://twitter.com/#!/BiketopiaCycles", :class => "icon-twitter", :target => :blank %>
+      <%= link_to "Yelp", "http://www.yelp.com/biz/biketopia-community-workshop-berkeley-2", :class => "icon-yelp", :target => :blank %>
+    </div>
+  </div>
 </nav>
 <% end -%>

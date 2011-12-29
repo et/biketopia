@@ -1,10 +1,23 @@
 // Imports -------------------------------------------------------------------
 
 @import "susy";
+@import "compass/css3";
 @import "compass/typography/links/hover-link";
 @import "compass/typography/links/link-colors";
 @import "compass/typography/lists/horizontal-list";
 @import "compass/typography/vertical_rhythm";
+@import "compass/utilities/text/replacement";
+
+@import "icon/*.png";
+@include all-icon-sprites;
+@include font-face("Chunkfive", font-files("Chunkfive.ttf", truetype, "Chunkfive.otf", opentype));
+@include font-face("Newfolk-outline", font-files("Newfolk-outline.otf", opentype));
+@include font-face("Newfolk-shadow", font-files("Newfolk-shadow.otf", opentype));
+@include font-face("Newfolk-sketches", font-files("Newfolk-sketches.otf", opentype));
+@include font-face("Newfolk-solid", font-files("Newfolk-solid.otf", opentype));
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Squada+One);
 
 // Grid ----------------------------------------------------------------------
 
@@ -17,3 +30,4 @@ $base-font-size: 14px;
 $base-line-height: 22px;
 
 @include establish-baseline;
+

@@ -5,53 +5,123 @@
 
 /* Colors ------------------------------------------------------------------*/
 
+$color-body-background: #202b30;
+$color-header: #e7e8e3;
+$color-header2: #bf302d;
+$color-list: white;
 $color-paragraph: #bdbdbd;
-$color-link-normal: #24221f;
+$color-link-normal: #fec10e;
 $color-link-hover: #3f3f3f;
 
 /* Layout ------------------------------------------------------------------*/
 
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+
 body {
-  //background-image: image-url('broken_noise.png');
+  background-image: image-url('broken_noise.png');
   color: $color-paragraph;
+  //font-family: 'Helvetica Neue', Arial,'Liberation Sans', FreeSans, sans-serif;
+  font-family: 'Droid Sans', sans-serif;
+  border-top: 2px solid $color-body-background;
 }
 
 a {
   @include link-colors($color-link-normal, $color-link-hover);
-  @include hover-link;
+  text-decoration: none;
+}
+
+li {
+  a, a:hover {
+    color: $color-list;
+  }
+}
+
+h2 {
+  color: $color-header2;
+  font-style: italic;
 }
 
 #container {
   @include container;
-  @include susy-grid-background;
+  //@include susy-grid-background;
 }
 
 header {
-  @include columns(12);
+  margin-top: 9em;
+  margin-bottom: 1.5em;
   h1 {
-    @include full;
+    @include full(12);
+    @include prefix(3);
+    @include alpha;
+
+    font-size: $base-font-size + 10;
+    font-family: "Chunkfive";
+    font-weight: 400;
+    text-transform: uppercase;
+    a { color: $color-header; }
   }
 
   nav {
-    @include columns(7,12);
-    @include omega(7);
+    @include columns(3);
+    @include alpha;
+    text-align: right;
+    ul#main-nav {
+      @include no-bullets;
+      margin-bottom: 1.5em;
 
-    ul {
-      @include horizontal-list;
+      li {
+        padding: 0.25em;
+        margin-bottom: 0.5em;
+        a {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        &.selected, &:hover {
+          background-color: #d56350;
+        }
+      }
+    }
+
+    div#find-us {
+      address {
+        margin-bottom: 1.5em;
+      }
+
+      div#social {
+        a {
+          @include box-shadow(#000, 1px, 1px, 2px);
+          @include border-radius(4px);
+          @include inline-block;
+          @include hide-text;
+          position: relative;
+          width: 24px;
+          height: 24px;
+
+          &:hover { top: -2px; @include box-shadow(#000, 1px, 3px, 4px); }
+          &:active { top: -1px; @include box-shadow(#000, 1px, 2px, 4px); }
+        }
+      }
     }
   }
 }
 
 section#main-content {
-  @include columns(12);
+  @include columns(9);
+  @include omega;
 
   #main_content_left {
-    @include columns(8,12);
-    @include prefix(1);
+    @include columns(6,9);
   }
 
   #main_content_right {
-    @include columns(3,12);
-    @include omega(3);
+    @include columns(3,9);
+    @include omega(9);
   }
 }
