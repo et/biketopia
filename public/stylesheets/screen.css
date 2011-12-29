@@ -120,13 +120,22 @@ li a, li a:hover {
   color: white;
 }
 
-/* line 56, ../../app/stylesheets/screen.scss */
+/* line 58, ../../app/stylesheets/screen.scss */
+dl dt {
+  font-weight: bold;
+}
+/* line 59, ../../app/stylesheets/screen.scss */
+dl dd {
+  padding-left: 50px;
+}
+
+/* line 62, ../../app/stylesheets/screen.scss */
 h2 {
   color: #bf302d;
   font-style: italic;
 }
 
-/* line 61, ../../app/stylesheets/screen.scss */
+/* line 67, ../../app/stylesheets/screen.scss */
 #container {
   *zoom: 1;
   margin: auto;
@@ -140,11 +149,11 @@ h2 {
   clear: both;
 }
 
-/* line 66, ../../app/stylesheets/screen.scss */
+/* line 72, ../../app/stylesheets/screen.scss */
 header {
   margin-bottom: 9em;
 }
-/* line 68, ../../app/stylesheets/screen.scss */
+/* line 74, ../../app/stylesheets/screen.scss */
 header h1 {
   background-image: url('/images/header-bg.png?1325199687');
   clear: both;
@@ -155,12 +164,12 @@ header h1 {
   font-weight: 400;
   text-transform: uppercase;
 }
-/* line 78, ../../app/stylesheets/screen.scss */
+/* line 84, ../../app/stylesheets/screen.scss */
 header h1 a {
   color: #e7e8e3;
 }
 
-/* line 82, ../../app/stylesheets/screen.scss */
+/* line 88, ../../app/stylesheets/screen.scss */
 nav {
   display: inline;
   float: left;
@@ -169,7 +178,7 @@ nav {
   margin-left: 1.639%;
   text-align: right;
 }
-/* line 86, ../../app/stylesheets/screen.scss */
+/* line 92, ../../app/stylesheets/screen.scss */
 nav ul#main-nav {
   list-style: none;
   margin-bottom: 1.5em;
@@ -180,25 +189,25 @@ nav ul#main-nav li {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 90, ../../app/stylesheets/screen.scss */
+/* line 96, ../../app/stylesheets/screen.scss */
 nav ul#main-nav li {
   padding: 0.25em;
   margin-bottom: 0.5em;
 }
-/* line 93, ../../app/stylesheets/screen.scss */
+/* line 99, ../../app/stylesheets/screen.scss */
 nav ul#main-nav li a {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 98, ../../app/stylesheets/screen.scss */
+/* line 104, ../../app/stylesheets/screen.scss */
 nav ul#main-nav li.selected, nav ul#main-nav li:hover {
   background-color: #d56350;
 }
-/* line 105, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 nav div#find-us address {
   margin-bottom: 1.5em;
 }
-/* line 110, ../../app/stylesheets/screen.scss */
+/* line 116, ../../app/stylesheets/screen.scss */
 nav div#find-us div#social a {
   -moz-box-shadow: black 1px 1px 2px;
   -webkit-box-shadow: black 1px 1px 2px;
@@ -226,7 +235,7 @@ nav div#find-us div#social a {
 nav div#find-us div#social a {
   *display: inline;
 }
-/* line 119, ../../app/stylesheets/screen.scss */
+/* line 125, ../../app/stylesheets/screen.scss */
 nav div#find-us div#social a:hover {
   top: -2px;
   -moz-box-shadow: black 1px 3px 4px;
@@ -234,7 +243,7 @@ nav div#find-us div#social a:hover {
   -o-box-shadow: black 1px 3px 4px;
   box-shadow: black 1px 3px 4px;
 }
-/* line 120, ../../app/stylesheets/screen.scss */
+/* line 126, ../../app/stylesheets/screen.scss */
 nav div#find-us div#social a:active {
   top: -1px;
   -moz-box-shadow: black 1px 2px 4px;
@@ -243,7 +252,7 @@ nav div#find-us div#social a:active {
   box-shadow: black 1px 2px 4px;
 }
 
-/* line 126, ../../app/stylesheets/screen.scss */
+/* line 132, ../../app/stylesheets/screen.scss */
 section#main-content {
   display: inline;
   float: left;
@@ -254,14 +263,14 @@ section#main-content {
   margin-right: 1.639%;
   #margin-left: -1em;
 }
-/* line 130, ../../app/stylesheets/screen.scss */
+/* line 136, ../../app/stylesheets/screen.scss */
 section#main-content #main_content_left {
   display: inline;
   float: left;
   width: 65.909%;
   margin-right: 2.273%;
 }
-/* line 134, ../../app/stylesheets/screen.scss */
+/* line 140, ../../app/stylesheets/screen.scss */
 section#main-content #main_content_right {
   display: inline;
   float: left;

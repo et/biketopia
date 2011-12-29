@@ -53,6 +53,11 @@ li {
   }
 }
 
+dl {
+  dt { font-weight:bold; }
+  dd { padding-left: 50px; }
+}
+
 h2 {
   color: $color-header2;
   font-style: italic;
