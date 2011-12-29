@@ -1,6 +1,8 @@
 // Imports -------------------------------------------------------------------
 
 @import "base";
+@import "icon/*.png";
+@include all-icon-sprites;
 
 
 /* Colors ------------------------------------------------------------------*/
@@ -32,8 +34,9 @@ body {
 }
 
 a {
-  @include link-colors($color-link-normal, $color-link-hover);
+  @include link-colors($color-link-normal, $color-link-normal);
   text-decoration: none;
+  &:hover { text-decoration: underline; }
 }
 
 li {

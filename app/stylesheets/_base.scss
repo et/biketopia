@@ -9,8 +9,6 @@
 @import "compass/typography/text/replacement";
 
 
-@import "icon/*.png";
-@include all-icon-sprites;
 @include font-face("Chunkfive", font-files("Chunkfive.ttf", truetype, "Chunkfive.otf", opentype));
 @include font-face("Newfolk-outline", font-files("Newfolk-outline.otf", opentype));
 @include font-face("Newfolk-shadow", font-files("Newfolk-shadow.otf", opentype));

@@ -1,23 +1,3 @@
-/* line 39, icon */
-.icon-sprite, .icon-facebook, .icon-twitter, .icon-yelp {
-  background: url('/images/icon-s2f820df44e.png') no-repeat;
-}
-
-/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-facebook {
-  background-position: 0 0;
-}
-
-/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-twitter {
-  background-position: 0 -24px;
-}
-
-/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-yelp {
-  background-position: 0 -48px;
-}
-
 @font-face {
   font-family: "Chunkfive";
   src: url('/fonts/Chunkfive.ttf') format('truetype'), url('/fonts/Chunkfive.otf') format('opentype');
@@ -56,9 +36,41 @@ html > body {
   font-size: 14px;
 }
 
+/* line 57, icon */
+.icon-sprite, .icon-facebook, .icon-twitter, .icon-yelp {
+  background: url('/images/icon-s8e977fc0c7.png') no-repeat;
+}
+
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-facebook {
+  background-position: 0 0;
+}
+/* line 43, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-facebook:hover, .icon-facebook.facebook_hover, .icon-facebook.facebook-hover {
+  background-position: 0 -24px;
+}
+
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-twitter {
+  background-position: 0 -48px;
+}
+/* line 43, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-twitter:hover, .icon-twitter.twitter_hover, .icon-twitter.twitter-hover {
+  background-position: 0 -72px;
+}
+
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-yelp {
+  background-position: 0 -96px;
+}
+/* line 43, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-yelp:hover, .icon-yelp.yelp_hover, .icon-yelp.yelp-hover {
+  background-position: 0 -120px;
+}
+
 /* Colors ------------------------------------------------------------------*/
 /* Layout ------------------------------------------------------------------*/
-/* line 18, ../../app/stylesheets/screen.scss */
+/* line 20, ../../app/stylesheets/screen.scss */
 * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
@@ -67,36 +79,40 @@ html > body {
   -webkit-padding-start: 0;
 }
 
-/* line 26, ../../app/stylesheets/screen.scss */
+/* line 28, ../../app/stylesheets/screen.scss */
 body {
-  background-image: url('/images/broken_noise.png?1323405134');
+  background-image: url('/images/broken_noise.png?1323728660');
   color: #bdbdbd;
   font-family: 'Droid Sans', sans-serif;
   border-top: 2px solid #202b30;
 }
 
-/* line 34, ../../app/stylesheets/screen.scss */
+/* line 36, ../../app/stylesheets/screen.scss */
 a {
   color: #fec10e;
   text-decoration: none;
 }
 /* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
-  color: #3f3f3f;
+  color: #fec10e;
+}
+/* line 39, ../../app/stylesheets/screen.scss */
+a:hover {
+  text-decoration: underline;
 }
 
-/* line 40, ../../app/stylesheets/screen.scss */
+/* line 43, ../../app/stylesheets/screen.scss */
 li a, li a:hover {
   color: white;
 }
 
-/* line 45, ../../app/stylesheets/screen.scss */
+/* line 48, ../../app/stylesheets/screen.scss */
 h2 {
   color: #bf302d;
   font-style: italic;
 }
 
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 53, ../../app/stylesheets/screen.scss */
 #container {
   *zoom: 1;
   margin: auto;
@@ -110,12 +126,12 @@ h2 {
   clear: both;
 }
 
-/* line 55, ../../app/stylesheets/screen.scss */
+/* line 58, ../../app/stylesheets/screen.scss */
 header {
   margin-top: 9em;
   margin-bottom: 1.5em;
 }
-/* line 58, ../../app/stylesheets/screen.scss */
+/* line 61, ../../app/stylesheets/screen.scss */
 header h1 {
   clear: both;
   padding-left: 24.59%;
@@ -125,11 +141,11 @@ header h1 {
   font-weight: 400;
   text-transform: uppercase;
 }
-/* line 67, ../../app/stylesheets/screen.scss */
+/* line 70, ../../app/stylesheets/screen.scss */
 header h1 a {
   color: #e7e8e3;
 }
-/* line 70, ../../app/stylesheets/screen.scss */
+/* line 73, ../../app/stylesheets/screen.scss */
 header nav {
   display: inline;
   float: left;
@@ -138,7 +154,7 @@ header nav {
   margin-left: 1.639%;
   text-align: right;
 }
-/* line 74, ../../app/stylesheets/screen.scss */
+/* line 77, ../../app/stylesheets/screen.scss */
 header nav ul#main-nav {
   list-style: none;
   margin-bottom: 1.5em;
@@ -149,25 +165,25 @@ header nav ul#main-nav li {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 78, ../../app/stylesheets/screen.scss */
+/* line 81, ../../app/stylesheets/screen.scss */
 header nav ul#main-nav li {
   padding: 0.25em;
   margin-bottom: 0.5em;
 }
-/* line 81, ../../app/stylesheets/screen.scss */
+/* line 84, ../../app/stylesheets/screen.scss */
 header nav ul#main-nav li a {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 86, ../../app/stylesheets/screen.scss */
+/* line 89, ../../app/stylesheets/screen.scss */
 header nav ul#main-nav li.selected, header nav ul#main-nav li:hover {
   background-color: #d56350;
 }
-/* line 93, ../../app/stylesheets/screen.scss */
+/* line 96, ../../app/stylesheets/screen.scss */
 header nav div#find-us address {
   margin-bottom: 1.5em;
 }
-/* line 98, ../../app/stylesheets/screen.scss */
+/* line 101, ../../app/stylesheets/screen.scss */
 header nav div#find-us div#social a {
   -moz-box-shadow: black 1px 1px 2px;
   -webkit-box-shadow: black 1px 1px 2px;
@@ -195,7 +211,7 @@ header nav div#find-us div#social a {
 header nav div#find-us div#social a {
   *display: inline;
 }
-/* line 107, ../../app/stylesheets/screen.scss */
+/* line 110, ../../app/stylesheets/screen.scss */
 header nav div#find-us div#social a:hover {
   top: -2px;
   -moz-box-shadow: black 1px 3px 4px;
@@ -203,7 +219,7 @@ header nav div#find-us div#social a:hover {
   -o-box-shadow: black 1px 3px 4px;
   box-shadow: black 1px 3px 4px;
 }
-/* line 108, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 header nav div#find-us div#social a:active {
   top: -1px;
   -moz-box-shadow: black 1px 2px 4px;
@@ -212,7 +228,7 @@ header nav div#find-us div#social a:active {
   box-shadow: black 1px 2px 4px;
 }
 
-/* line 115, ../../app/stylesheets/screen.scss */
+/* line 118, ../../app/stylesheets/screen.scss */
 section#main-content {
   display: inline;
   float: left;
@@ -223,14 +239,14 @@ section#main-content {
   margin-right: 1.639%;
   #margin-left: -1em;
 }
-/* line 119, ../../app/stylesheets/screen.scss */
+/* line 122, ../../app/stylesheets/screen.scss */
 section#main-content #main_content_left {
   display: inline;
   float: left;
   width: 65.909%;
   margin-right: 2.273%;
 }
-/* line 123, ../../app/stylesheets/screen.scss */
+/* line 126, ../../app/stylesheets/screen.scss */
 section#main-content #main_content_right {
   display: inline;
   float: left;
