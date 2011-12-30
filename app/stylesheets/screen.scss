@@ -25,9 +25,12 @@ $color-link-hover: #3f3f3f;
 body {
   background-image: image-url('broken_noise.png');
   color: $color-paragraph;
-  //font-family: 'Helvetica Neue', Arial,'Liberation Sans', FreeSans, sans-serif;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Droid Sans', Arial, sans-serif;
   border-top: 2px solid $color-body-background;
+}
+
+h1,h2 {
+  font-family: 'Droid Sans-Bold', Arial, sans-serif;
 }
 
 a {
@@ -60,7 +63,6 @@ dl {
 
 h2 {
   color: $color-header2;
-  font-style: italic;
 }
 
 #container {
@@ -69,18 +71,22 @@ h2 {
 }
 
 header {
-  margin-bottom: 9em;
+  @include full;
+  margin-bottom: 7em;
+  background-image: image-url('header-bg.png');
+  padding: 1em;
   h1 {
-    background-image: image-url('header-bg.png');
-    @include full(12);
-    @include prefix(3);
-    @include alpha;
+    @include columns(4);
 
-    font-size: $base-font-size + 10;
+    font-size: $base-font-size + 20;
     font-family: "Chunkfive";
     font-weight: 400;
     text-transform: uppercase;
     a { color: $color-header; }
+  }
+  h2 {
+    color: $color-header;
+    font-style: italic;
   }
 }
 
