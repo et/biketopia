@@ -11,6 +11,7 @@ $color-list: white;
 $color-paragraph: #bdbdbd;
 $color-link-normal: #fec10e;
 $color-link-hover: #3f3f3f;
+$color-nav-background: #d56350;
 
 /* Layout ------------------------------------------------------------------*/
 
@@ -49,6 +50,7 @@ a {
   color: #fff;
   text-shadow: none;
 }
+ul { @include no-bullets; }
 
 li {
   a, a:hover {
@@ -72,7 +74,6 @@ h2 {
 
 header {
   @include full;
-  margin-bottom: 7em;
   background-image: image-url('header-bg.png');
   padding: 1em;
   h1 {
@@ -95,7 +96,6 @@ nav {
   @include alpha;
   text-align: right;
   ul#main-nav {
-    @include no-bullets;
     margin-bottom: 1.5em;
 
     li {
@@ -104,10 +104,11 @@ nav {
       a {
         font-weight: bold;
         text-transform: uppercase;
+        display: block;
       }
 
       &.selected, &:hover {
-        background-color: #d56350;
+        background-color: $color-nav-background;
       }
     }
   }
