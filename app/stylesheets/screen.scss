@@ -76,6 +76,7 @@ header {
   @include full;
   background-image: image-url('header-bg.png');
   padding: 1em;
+  margin-bottom: 1em;
   h1 {
     @include columns(4);
 
