@@ -84,7 +84,7 @@ body {
   background-image: url('/images/broken_noise.png?1323405134');
   color: #bdbdbd;
   font-family: 'Droid Sans', Arial, sans-serif;
-  border-top: 2px solid #202b30;
+  margin: 0;
 }
 
 /* line 33, ../../app/stylesheets/screen.scss */
@@ -134,23 +134,24 @@ ul li {
 /* line 56, ../../app/stylesheets/screen.scss */
 li a, li a:hover {
   color: white;
+  text-decoration: none;
 }
 
-/* line 62, ../../app/stylesheets/screen.scss */
+/* line 63, ../../app/stylesheets/screen.scss */
 dl dt {
   font-weight: bold;
 }
-/* line 63, ../../app/stylesheets/screen.scss */
+/* line 64, ../../app/stylesheets/screen.scss */
 dl dd {
   padding-left: 50px;
 }
 
-/* line 66, ../../app/stylesheets/screen.scss */
+/* line 67, ../../app/stylesheets/screen.scss */
 h2 {
   color: #bf302d;
 }
 
-/* line 70, ../../app/stylesheets/screen.scss */
+/* line 71, ../../app/stylesheets/screen.scss */
 #container {
   *zoom: 1;
   margin: auto;
@@ -164,37 +165,57 @@ h2 {
   clear: both;
 }
 
-/* line 75, ../../app/stylesheets/screen.scss */
+/* line 76, ../../app/stylesheets/screen.scss */
 header {
   clear: both;
   margin-left: 1.639%;
   margin-right: 1.639%;
-  background-image: url('/images/header-bg.png?1325215240');
-  padding: 1em;
+  background: #b72517 url('/images/header-bg.png?1325215240');
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-bottom: 1em;
 }
-/* line 80, ../../app/stylesheets/screen.scss */
+/* line 82, ../../app/stylesheets/screen.scss */
 header h1 {
-  display: inline;
-  float: left;
-  width: 31.148%;
-  margin-right: 1.639%;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
   font-size: 34px;
   font-family: "Chunkfive";
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 0;
+  margin-left: 10px;
 }
-/* line 87, ../../app/stylesheets/screen.scss */
+/* line 7, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+header h1 {
+  *display: inline;
+}
+/* line 88, ../../app/stylesheets/screen.scss */
 header h1 a {
   color: #e7e8e3;
 }
-/* line 89, ../../app/stylesheets/screen.scss */
+/* line 92, ../../app/stylesheets/screen.scss */
 header h2 {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  margin-left: 3.279%;
+  font-size: 24px;
   color: #e7e8e3;
   font-style: italic;
+  line-height: 0;
+}
+/* line 7, ../../../../.rvm/gems/ruby-1.9.2-p290@biketopia/gems/compass-0.11.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+header h2 {
+  *display: inline;
 }
 
-/* line 95, ../../app/stylesheets/screen.scss */
+/* line 102, ../../app/stylesheets/screen.scss */
 nav {
   display: inline;
   float: left;
@@ -203,30 +224,31 @@ nav {
   margin-left: 1.639%;
   text-align: right;
 }
-/* line 99, ../../app/stylesheets/screen.scss */
+/* line 106, ../../app/stylesheets/screen.scss */
 nav ul#main-nav {
+  padding-left: 0;
   margin-bottom: 1.5em;
 }
-/* line 102, ../../app/stylesheets/screen.scss */
+/* line 110, ../../app/stylesheets/screen.scss */
 nav ul#main-nav li {
   padding: 0.25em;
   margin-bottom: 0.5em;
 }
-/* line 105, ../../app/stylesheets/screen.scss */
+/* line 113, ../../app/stylesheets/screen.scss */
 nav ul#main-nav li a {
   font-weight: bold;
   text-transform: uppercase;
   display: block;
 }
-/* line 111, ../../app/stylesheets/screen.scss */
+/* line 119, ../../app/stylesheets/screen.scss */
 nav ul#main-nav li.selected, nav ul#main-nav li:hover {
   background-color: #d56350;
 }
-/* line 118, ../../app/stylesheets/screen.scss */
+/* line 126, ../../app/stylesheets/screen.scss */
 nav div#find-us address {
-  margin-bottom: 1.5em;
+  margin-bottom: 7px;
 }
-/* line 123, ../../app/stylesheets/screen.scss */
+/* line 131, ../../app/stylesheets/screen.scss */
 nav div#find-us div#social a {
   -moz-box-shadow: black 1px 1px 2px;
   -webkit-box-shadow: black 1px 1px 2px;
@@ -254,7 +276,7 @@ nav div#find-us div#social a {
 nav div#find-us div#social a {
   *display: inline;
 }
-/* line 132, ../../app/stylesheets/screen.scss */
+/* line 140, ../../app/stylesheets/screen.scss */
 nav div#find-us div#social a:hover {
   top: -2px;
   -moz-box-shadow: black 1px 3px 4px;
@@ -262,7 +284,7 @@ nav div#find-us div#social a:hover {
   -o-box-shadow: black 1px 3px 4px;
   box-shadow: black 1px 3px 4px;
 }
-/* line 133, ../../app/stylesheets/screen.scss */
+/* line 141, ../../app/stylesheets/screen.scss */
 nav div#find-us div#social a:active {
   top: -1px;
   -moz-box-shadow: black 1px 2px 4px;
@@ -271,7 +293,7 @@ nav div#find-us div#social a:active {
   box-shadow: black 1px 2px 4px;
 }
 
-/* line 139, ../../app/stylesheets/screen.scss */
+/* line 147, ../../app/stylesheets/screen.scss */
 section#main-content {
   display: inline;
   float: left;
@@ -282,14 +304,14 @@ section#main-content {
   margin-right: 1.639%;
   #margin-left: -1em;
 }
-/* line 143, ../../app/stylesheets/screen.scss */
+/* line 151, ../../app/stylesheets/screen.scss */
 section#main-content #main_content_left {
   display: inline;
   float: left;
   width: 65.909%;
   margin-right: 2.273%;
 }
-/* line 147, ../../app/stylesheets/screen.scss */
+/* line 155, ../../app/stylesheets/screen.scss */
 section#main-content #main_content_right {
   display: inline;
   float: left;

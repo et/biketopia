@@ -27,7 +27,7 @@ body {
   background-image: image-url('broken_noise.png');
   color: $color-paragraph;
   font-family: 'Droid Sans', Arial, sans-serif;
-  border-top: 2px solid $color-body-background;
+  margin: 0;
 }
 
 h1,h2 {
@@ -55,6 +55,7 @@ ul { @include no-bullets; }
 li {
   a, a:hover {
     color: $color-list;
+    text-decoration: none;
   }
 }
 
@@ -74,21 +75,27 @@ h2 {
 
 header {
   @include full;
-  background-image: image-url('header-bg.png');
-  padding: 1em;
+  background: #b72517 image-url('header-bg.png');
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-bottom: 1em;
   h1 {
-    @include columns(4);
-
+    @include inline-block;
     font-size: $base-font-size + 20;
     font-family: "Chunkfive";
     font-weight: 400;
     text-transform: uppercase;
     a { color: $color-header; }
+    line-height: 0;
+    margin-left: 10px;
   }
   h2 {
+    @include inline-block;
+    margin-left: columns(0.5);
+    font-size: $base-font-size + 10;
     color: $color-header;
     font-style: italic;
+    line-height: 0;
   }
 }
 
@@ -97,6 +104,7 @@ nav {
   @include alpha;
   text-align: right;
   ul#main-nav {
+    padding-left: 0;
     margin-bottom: 1.5em;
 
     li {
@@ -116,7 +124,7 @@ nav {
 
   div#find-us {
     address {
-      margin-bottom: 1.5em;
+      margin-bottom: 7px;
     }
 
     div#social {
