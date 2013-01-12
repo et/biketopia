@@ -14,9 +14,9 @@
 		illustrator --> E42313
 */
 
-$color-body-background: #ffffff; //#202b30
+$color-body-background: #ffffff; /* #202b30
 $color-header: #e7e8e3;
-$color-header2: #bf302d;
+$color-header2: #bf302d; */
 $color-list: white;
 $color-paragraph: #bdbdbd;
 $color-link-normal: #fec10e;
@@ -34,7 +34,6 @@ $color-nav-background: #d56350;
 }
 
 body {
-  //background-image: image-url('broken_noise.png');
   background-color: $color-body-background;
   color: $color-paragraph;
   font-family: 'Droid Sans', Arial, sans-serif;
@@ -48,10 +47,38 @@ body {
 	
 header {
   @include full;
-  background: transparent; //#b72517 image-url('header-bg.png');
+  background: transparent;
   padding-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 1em;
+}
+	#logo {
+		margin 0 auto;
+	}
+	#header-info {
+		float: right;	
+	}
+ 
+    div#social {
+      a {
+        @include box-shadow(#000 1px 1px 2px);
+        @include border-radius(4px);
+        @include inline-block;
+        @include hide-text;
+        position: relative;
+        width: 24px;
+        height: 24px;
+
+        &:hover { top: -2px; @include box-shadow(#000 1px 3px 4px); }
+        &:active { top: -1px; @include box-shadow(#000 1px 2px 4px); }
+      }
+    }
+	div#find-us {
+		address {
+			margin-bottom: 7px;
+		}
+	}
+  /*
   h1 {
     @include inline-block;
     font-size: $base-font-size + 20;
@@ -70,29 +97,7 @@ header {
     font-style: italic;
     line-height: 0;
   }
-  
-  div#find-us {
-    address {
-      margin-bottom: 7px;
-    }
-
-    div#social {
-      a {
-        @include box-shadow(#000 1px 1px 2px);
-        @include border-radius(4px);
-        @include inline-block;
-        @include hide-text;
-        position: relative;
-        width: 24px;
-        height: 24px;
-
-        &:hover { top: -2px; @include box-shadow(#000 1px 3px 4px); }
-        &:active { top: -1px; @include box-shadow(#000 1px 2px 4px); }
-      }
-    }
-  }
-  
-}
+  */
 
 nav {
   @include columns(3);
