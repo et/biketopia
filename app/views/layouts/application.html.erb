@@ -7,15 +7,17 @@
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="container">
       <header>
-		<!--- this comment is in application.html.erb --->
         <%= render :partial => "/shared/header" -%>
       </header>
 
-      <%= render :partial => "/shared/menu" %>
+		<div id="mainwrap">
+		  <%= render :partial => "/shared/menu" %>
 
-      <section id='main-content'>
-        <%= yield %>
-      </section>
+		  <section id='main-content'>
+			<%= yield %>
+		  </section>
+		</div>
+		
       <footer>
         <%= render :partial => "/shared/footer" -%>
       </footer>

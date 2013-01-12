@@ -15,20 +15,5 @@
                  :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
   </ul>
-  <div id='find-us'>
-    <h2>find us</h2>
-    <address>
-      <%= link_to "1752 Alcatraz Adeline\nBerkeley, CA 94704", "http://g.co/maps/mue6k", :target => :blank %>
-    </address>
-    <div id="social">
-      <%= link_to "Facebook", "https://www.facebook.com/BiketopiaBerkeley", :class => "icon-facebook", :target => :blank %>
-      <%= link_to "Twitter", "https://twitter.com/#!/BiketopiaCycles", :class => "icon-twitter", :target => :blank %>
-      <%= link_to "Yelp", "http://www.yelp.com/biz/biketopia-community-workshop-berkeley-2", :class => "icon-yelp", :target => :blank %>
-    </div>
-  </div>
-
-  <h2 style="margin-top: 15px;">contact us</h2>
-    <%= mail_to "zach.cohen@biketopiaworkshop.org", "e-mail", :subject => "Question about Biketopia" %><br />
-    415.606.3189
 </nav>
 <% end -%>

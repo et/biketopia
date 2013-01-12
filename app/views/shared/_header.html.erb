@@ -1,10 +1,23 @@
-<!--- this comment is the _header partial --->
-<hgroup>
-  <h1><%= link_to "Biketopia", root_path %></h1>
-  <h2>Community Workshop</h2>
-</hgroup>
+	<div id="logo"><%= link_to image_tag("images/logo.png", :class => "logo"), root_path %></div>
+	
+	<aside id='header-info'>
+		<a>find us</a>
+		<address>
+			<%= link_to "1752 Alcatraz Adeline\nBerkeley, CA 94704", "http://g.co/maps/mue6k", :target => :blank %>
+		</address>
+		<div id="social">
+		  <%= link_to "Facebook", "https://www.facebook.com/BiketopiaBerkeley", :class => "icon-facebook", :target => :blank %>
+		  <%= link_to "Twitter", "https://twitter.com/#!/BiketopiaCycles", :class => "icon-twitter", :target => :blank %>
+		  <%= link_to "Yelp", "http://www.yelp.com/biz/biketopia-community-workshop-berkeley-2", :class => "icon-yelp", :target => :blank %>
+		</div>
+		
+		<!--- Add: gmap on hover of address, social media icons (font awesome) --->
+
+		<a>contact us</a>
+		<%= mail_to "colin.moss@biketopiaworkshop.org", "e-mail", :subject => "Question about Biketopia" %><br />
+		415.606.3189
+	</aside>
+	
 <% if false %>
-<h1 id='logo'>
-  <%= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %>
-</h1>
+  <%= link_to image_tag("images/logo.png", :class => "logo"), root_path %>
 <% end %>

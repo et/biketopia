@@ -4,7 +4,17 @@
 
 /* Colors ------------------------------------------------------------------*/
 
-$color-body-background: #202b30;
+/* Biz Card Colors (originally in CMYK) ---
+	Blue:
+		Hex converter online --> 2697BD
+		Illustrator --> 027CA5
+		
+	Red:
+		hex converter online --> FF0D00
+		illustrator --> E42313
+*/
+
+$color-body-background: #ffffff; //#202b30
 $color-header: #e7e8e3;
 $color-header2: #bf302d;
 $color-list: white;
@@ -24,58 +34,21 @@ $color-nav-background: #d56350;
 }
 
 body {
-  background-image: image-url('broken_noise.png');
+  //background-image: image-url('broken_noise.png');
+  background-color: $color-body-background;
   color: $color-paragraph;
   font-family: 'Droid Sans', Arial, sans-serif;
   margin: 0;
-}
-
-h1,h2 {
-  font-family: 'Droid Sans-Bold', Arial, sans-serif;
-}
-
-a {
-  @include link-colors($color-link-normal, $color-link-normal);
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
-}
-
-::-moz-selection {
-  background: rgba(183, 47, 23,0.7);
-  color: #fff;
-  text-shadow: none;
-}
-::selection {
-  background: rgba(183, 47, 23,0.7);
-  color: #fff;
-  text-shadow: none;
-}
-ul { @include no-bullets; }
-
-li {
-  a, a:hover {
-    color: $color-list;
-    text-decoration: none;
-  }
-}
-
-dl {
-  dt { font-weight:bold; }
-  dd { padding-left: 50px; }
-}
-
-h2 {
-  color: $color-header2;
 }
 
 #container {
   @include container;
   //@include susy-grid-background;
 }
-
+	
 header {
   @include full;
-  background: #b72517 image-url('header-bg.png');
+  background: transparent; //#b72517 image-url('header-bg.png');
   padding-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 1em;
@@ -97,6 +70,28 @@ header {
     font-style: italic;
     line-height: 0;
   }
+  
+  div#find-us {
+    address {
+      margin-bottom: 7px;
+    }
+
+    div#social {
+      a {
+        @include box-shadow(#000 1px 1px 2px);
+        @include border-radius(4px);
+        @include inline-block;
+        @include hide-text;
+        position: relative;
+        width: 24px;
+        height: 24px;
+
+        &:hover { top: -2px; @include box-shadow(#000 1px 3px 4px); }
+        &:active { top: -1px; @include box-shadow(#000 1px 2px 4px); }
+      }
+    }
+  }
+  
 }
 
 nav {
@@ -121,28 +116,15 @@ nav {
       }
     }
   }
-
-  div#find-us {
-    address {
-      margin-bottom: 7px;
-    }
-
-    div#social {
-      a {
-        @include box-shadow(#000 1px 1px 2px);
-        @include border-radius(4px);
-        @include inline-block;
-        @include hide-text;
-        position: relative;
-        width: 24px;
-        height: 24px;
-
-        &:hover { top: -2px; @include box-shadow(#000 1px 3px 4px); }
-        &:active { top: -1px; @include box-shadow(#000 1px 2px 4px); }
-      }
-    }
-  }
 }
+
+
+mainwrap {
+	//background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Inline-content layout ------------------------------------------------------------------*/
 
 section#main-content {
   @include columns(9);
@@ -156,4 +138,50 @@ section#main-content {
     @include columns(3,9);
     @include omega(9);
   }
+}
+
+	
+/* Fonts, hX etc ------------------------------------------------------------------*/
+
+h1,h2 {
+  font-family: 'Droid Sans-Bold', Arial, sans-serif;
+}
+
+h2 {
+  color: $color-header2;
+}
+
+
+/* Links ------------------------------------------------------------------*/
+a {
+  @include link-colors($color-link-normal, $color-link-normal);
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+::-moz-selection {
+  background: rgba(183, 47, 23,0.7);
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: rgba(183, 47, 23,0.7);
+  color: #fff;
+  text-shadow: none;
+}
+
+
+/* Lists ------------------------------------------------------------------*/
+ul { @include no-bullets; }
+
+li {
+  a, a:hover {
+    color: $color-list;
+    text-decoration: none;
+  }
+}
+
+dl {
+  dt { font-weight:bold; }
+  dd { padding-left: 50px; }
 }
