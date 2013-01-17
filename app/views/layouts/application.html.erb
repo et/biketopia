@@ -6,9 +6,10 @@
     <%= site_bar -%>
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="container">
-      <header>
+      <header id="site-header">
         <%= render :partial => "/shared/header" -%>
       </header>
+      <div class="clearboth"></div>
 
 		<div id="mainwrap">
 		  <%= render :partial => "/shared/menu" %>
@@ -16,12 +17,12 @@
 		  <section id='main-content'>
 			<%= yield %>
 		  </section>
+		  <div id="footer-clear"></div>
 		</div>
-		
-      <footer>
-        <%= render :partial => "/shared/footer" -%>
-      </footer>
     </div>
+    <footer>
+        <%= render :partial => "/shared/footer" -%>
+    </footer>
     <%= render :partial => "/shared/javascripts" %>
   </body>
 </html>

@@ -16,6 +16,12 @@ group :development, :test do
   gem 'guard-shell'
 end
 
+group :assets do
+ gem 'compass', ">= 0.11.6"
+ gem 'compass-rails', '>= 1.0.3'
+ gem 'susy'
+end
+
 
 # REFINERY CMS ================================================================
 # Anything you put in here will be overridden when the app gets updated.

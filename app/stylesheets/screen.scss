@@ -14,13 +14,13 @@
 		illustrator --> E42313
 */
 
-$color-body-background: #ffffff; /* #202b30
+$color-body-background: #ffffff; /* #202b30 */
 $color-header: #e7e8e3;
-$color-header2: #bf302d; */
-$color-list: white;
-$color-paragraph: #bdbdbd;
-$color-link-normal: #fec10e;
-$color-link-hover: #3f3f3f;
+$color-header2: #bf302d;
+$color-list: black;
+$color-paragraph: black;
+$color-link-normal: #027ca5; //biketopia blue
+$color-link-hover: #e42313; //biketopia red
 $color-nav-background: #d56350;
 
 /* Layout ------------------------------------------------------------------*/
@@ -33,6 +33,19 @@ $color-nav-background: #d56350;
   -webkit-padding-start: 0;
 }
 
+/* for full-size cover background.
+html { 
+	background: url(/images/logo_small.png) no-repeat center center fixed; 
+	-webkit-background-size: auto 90%;
+	-moz-background-size: auto 90%;
+	-o-background-size: auto 90%;
+	background-size: auto 90%;
+}*/
+
+html, body {
+	height: 100%;
+}
+
 body {
   background-color: $color-body-background;
   color: $color-paragraph;
@@ -42,109 +55,180 @@ body {
 
 #container {
   @include container;
-  //@include susy-grid-background;
+  // @include susy-grid-background;
+	//have left & right borders with gradients?
+	min-height: 100%;
 }
+
+	/* site header ------------------------------------------------------------------*/
 	
-header {
-  @include full;
-  background: transparent;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
+header#site-header {
+	padding-top: 0.8em;
+  @include span-columns(16);
+  // background: rgba(100, 100, 100, 0.5);
+  height: ($column-width*4) + ($gutter-width*3);
 }
 	#logo {
-		margin 0 auto;
+		text-align: center;
+		height: 100%;
 	}
-	#header-info {
-		float: right;	
-	}
- 
-    div#social {
-      a {
-        @include box-shadow(#000 1px 1px 2px);
-        @include border-radius(4px);
-        @include inline-block;
-        @include hide-text;
-        position: relative;
-        width: 24px;
-        height: 24px;
-
-        &:hover { top: -2px; @include box-shadow(#000 1px 3px 4px); }
-        &:active { top: -1px; @include box-shadow(#000 1px 2px 4px); }
-      }
-    }
-	div#find-us {
-		address {
-			margin-bottom: 7px;
+		#logo img {
+			height: 100%;
+			text-align: center;
 		}
+
+	#header-info {
+		float: right;
+		margin-top: -(($column-width*4) + ($gutter-width*3));
+		@include span-columns(omega 4,16);
 	}
-  /*
-  h1 {
-    @include inline-block;
-    font-size: $base-font-size + 20;
-    font-family: "Chunkfive";
-    font-weight: 400;
-    text-transform: uppercase;
-    a { color: $color-header; }
-    line-height: 0;
-    margin-left: 10px;
-  }
-  h2 {
-    @include inline-block;
-    margin-left: columns(0.5);
-    font-size: $base-font-size + 10;
-    color: $color-header;
-    font-style: italic;
-    line-height: 0;
-  }
-  */
+		div#social {
+		  a {
+			@include box-shadow(#000 1px 1px 2px);
+			@include border-radius(4px);
+			@include inline-block;
+			@include hide-text;
+			position: relative;
+			width: 24px;
+			height: 24px;
 
+			&:hover { top: -2px; @include box-shadow(#000 1px 3px 4px); }
+			&:active { top: -1px; @include box-shadow(#000 1px 2px 4px); }
+		  }
+		}
+		div#find-us {
+			address {
+			}
+		}
+
+	/* content etc. ------------------------------------------------------------------*/
+
+div#mainwrap {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	overflow: auto;
+}
+
+
+		/* navigation ------------------------------------------------------------------*/
 nav {
-  @include columns(3);
-  @include alpha;
-  text-align: right;
-  ul#main-nav {
-    padding-left: 0;
-    margin-bottom: 1.5em;
+	padding: 0;
+	margin: 0;
+	@include span-columns(16);
+	text-align: center;
+}
+	
+	nav ul#main-nav {
+		padding-left: 0;
+		@include no-bullets;
+		text-align: center;
+	}
 
-    li {
-      padding: 0.25em;
-      margin-bottom: 0.5em;
-      a {
-        font-weight: bold;
-        text-transform: uppercase;
-        display: block;
-      }
 
-      &.selected, &:hover {
-        background-color: $color-nav-background;
-      }
-    }
-  }
+    nav ul#main-nav li {
+		float: left;
+		@include span-columns(2,16);
+	}
+		nav ul#main-nav li .outercontainer {
+			display: table;
+			overflow: hidden;
+			background-color: white;
+			height: 3em;
+			width: 100%;
+			border-top: 0.5em solid $color-link-normal;
+			border-bottom: 0.5em solid white;
+			@include transition(background-color 0.4s ease-in, border-color 0.4s ease-in, color 0.5s linear);
+		}
+		nav ul#main-nav li.selected .outercontainer {
+			border-top: 0.5em solid white;
+			border-bottom: 0.5em solid $color-link-hover;
+		}
+			nav ul#main-nav li .outercontainer:Hover {
+				background-color: $color-link-normal;
+				//border-top: 0.5em solid white;
+				border-bottom: 0.5em solid $color-link-normal;
+				a {
+					color: white;
+				}
+			}
+			nav ul#main-nav li.selected .outercontainer:Hover {
+				//border-top: 0.5em solid white;
+				background-color: $color-link-hover;
+				border-bottom: 0.5em solid $color-link-hover;
+			}
+			
+				nav ul#main-nav li .outercontainer .innercontainer {
+					display: table-cell;
+					vertical-align: middle;
+					width: 100%;
+					margin: 0 auto;
+					text-align: center;
+
+					a {
+						font-weight: bold;
+						font-size: 90%;
+						line-height: 100%;
+						text-transform: uppercase;
+						display: block;
+						@include box-sizing(border-box);
+					}
+
+					&.selected, &:hover {
+					//	background-color: $color-nav-background;
+					}
+				}
+
+
+		/* Inline-content layout ------------------------------------------------------------------*/
+
+	section#main-content {
+	  @include span-columns(16);
+	  border-top: 0.6em solid $color-link-hover;
+	  
+	  #main_content_left {
+		@include span-columns(12,16);
+		//border-top: 0.2em solid $color-link-hover;
+	  }
+
+	  #main_content_right {
+		@include span-columns(4 omega,16);
+		//border-top: 0.2em solid $color-link-hover;
+	  }
+	}
+
+/* Footer clear + etc. ------------------------------------------------------------------*/
+
+div#footer-clear {
+		clear: both;
+		padding-bottom: 3em;
 }
 
+footer {
+	position: relative;
+	width: 100%;
+	padding-top: 0.5em;
+	background: $color-link-normal;
+	margin-top: -3em; /* negative value of footer height */
+	height: 3em;
+	clear:both;
+	@include box-sizing(border-box);
 
-mainwrap {
-	//background-color: rgba(255, 255, 255, 0.4);
+	font-size: 80%;
+	color: white;
+	text-align:center;
+	a {
+		color: white;
+		text-decoration: underline;
+	}
+	a:hover {
+		color: white;
+		text-decoration: none;
+	}
 }
 
-
-/* Inline-content layout ------------------------------------------------------------------*/
-
-section#main-content {
-  @include columns(9);
-  @include omega;
-
-  #main_content_left {
-    @include columns(6,9);
-  }
-
-  #main_content_right {
-    @include columns(3,9);
-    @include omega(9);
-  }
+.clearboth {
+	clear: both;
 }
-
 	
 /* Fonts, hX etc ------------------------------------------------------------------*/
 

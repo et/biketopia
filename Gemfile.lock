@@ -36,11 +36,13 @@ GEM
     babosa (0.3.5)
     bcrypt-ruby (3.0.1)
     builder (2.1.2)
-    chunky_png (1.2.5)
-    compass (0.11.6)
+    chunky_png (1.2.7)
+    compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     compass-susy-plugin (0.9)
       compass (>= 0.11.1)
     daemons (1.1.4)
@@ -59,7 +61,7 @@ GEM
     ffi (1.0.11)
     friendly_id_globalize3 (3.2.1.5)
       babosa (~> 0.3.0)
-    fssm (0.2.7)
+    fssm (0.2.9)
     globalize3 (0.1.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -178,10 +180,13 @@ GEM
     routing-filter (0.2.4)
       actionpack
     rubyzip (0.9.5)
-    sass (3.1.12)
+    sass (3.2.5)
     seo_meta (1.1.1)
       refinerycms-generators (~> 1.0.1)
     sqlite3 (1.3.5)
+    susy (1.0.5)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
     term-ansicolor (1.0.7)
     thin (1.3.1)
       daemons (>= 1.0.9)
@@ -202,6 +207,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass (>= 0.11.6)
+  compass-rails (>= 1.0.3)
   compass-susy-plugin
   guard-livereload
   guard-shell
@@ -211,4 +217,5 @@ DEPENDENCIES
   refinerycms-i18n (~> 1.0.0)
   refinerycms-news (~> 1.2)
   sqlite3
+  susy
   thin
