@@ -5,13 +5,8 @@
 /* Colors ------------------------------------------------------------------*/
 
 /* Biz Card Colors (originally in CMYK) ---
-	Blue:
-		Hex converter online --> 2697BD
-		Illustrator --> 027CA5
-		
-	Red:
-		hex converter online --> FF0D00
-		illustrator --> E42313
+	Blue: 007CA4
+	Red: E42313
 */
 
 $color-body-background: #ffffff; /* #202b30 */
@@ -19,18 +14,15 @@ $color-header: #e7e8e3;
 $color-header2: #bf302d;
 $color-list: black;
 $color-paragraph: black;
-$color-link-normal: #027ca5; //biketopia blue
+$color-link-normal: #007ca4; //biketopia blue
 $color-link-hover: #e42313; //biketopia red
 $color-nav-background: #d56350;
 
 /* Layout ------------------------------------------------------------------*/
 
 * {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-start: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* for full-size cover background.
@@ -63,7 +55,7 @@ body {
 	/* site header ------------------------------------------------------------------*/
 	
 header#site-header {
-	padding-top: 0.8em;
+	padding: 0.8em 0 1.2em 0;
   @include span-columns(16);
   // background: rgba(100, 100, 100, 0.5);
   height: ($column-width*4) + ($gutter-width*3);
@@ -81,9 +73,26 @@ header#site-header {
 		float: right;
 		margin-top: -(($column-width*4) + ($gutter-width*3));
 		@include span-columns(omega 4,16);
+		
+		p {
+			font-size: 85%;
+			line-height: 150%;
+		}
+		a{
+			
+		}
+		.header-info-h {
+			display: inline-block;
+			font-weight: bold;
+			font-size: 90%;
+			text-transform: lowercase;
+			padding-top: 0.8em;
+		}
 	}
 		div#social {
-		  a {
+			padding-top: 0.3em;
+		}
+		div#social a {
 			@include box-shadow(#000 1px 1px 2px);
 			@include border-radius(4px);
 			@include inline-block;
@@ -94,11 +103,6 @@ header#site-header {
 
 			&:hover { top: -2px; @include box-shadow(#000 1px 3px 4px); }
 			&:active { top: -1px; @include box-shadow(#000 1px 2px 4px); }
-		  }
-		}
-		div#find-us {
-			address {
-			}
 		}
 
 	/* content etc. ------------------------------------------------------------------*/
@@ -119,6 +123,7 @@ nav {
 }
 	
 	nav ul#main-nav {
+		margin-left: span-columns(2);
 		padding-left: 0;
 		@include no-bullets;
 		text-align: center;
@@ -129,6 +134,9 @@ nav {
 		float: left;
 		@include span-columns(2,16);
 	}
+		nav ul#main-nav li:first-child {
+			margin-left: ($column-width*2) + ($gutter-width*2);
+		}
 		nav ul#main-nav li .outercontainer {
 			display: table;
 			overflow: hidden;
@@ -184,13 +192,19 @@ nav {
 	section#main-content {
 	  @include span-columns(16);
 	  border-top: 0.6em solid $color-link-hover;
+	  padding: 0.5em 0 1em 0;
+	  
 	  
 	  #main_content_left {
-		@include span-columns(12,16);
+		@include span-columns(9,16);
 		//border-top: 0.2em solid $color-link-hover;
 	  }
 
 	  #main_content_right {
+		@include span-columns(6 omega,16);
+		//border-top: 0.2em solid $color-link-hover;
+	  }
+	  #main_content_ {
 		@include span-columns(4 omega,16);
 		//border-top: 0.2em solid $color-link-hover;
 	  }
@@ -233,11 +247,11 @@ footer {
 /* Fonts, hX etc ------------------------------------------------------------------*/
 
 h1,h2 {
-  font-family: 'Droid Sans-Bold', Arial, sans-serif;
+	margin: 0.2em 0;
+	font-family: 'Droid Sans-Bold', Arial, sans-serif;
 }
 
 h2 {
-  color: $color-header2;
 }
 
 

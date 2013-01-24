@@ -1,22 +1,22 @@
-	<div id="logo"><%= link_to image_tag("logo_small.png", :class => "logo"), root_path %></div>
+	<div id="logo"><%= link_to image_tag("logo-small.png", :class => "logo"), root_path %></div>
 	
 	<aside id='header-info'>
-		<a>find us</a>
+		<span class="header-info-h"><p>We'd love to meet you!</p></span>
 		<address>
-			<%= link_to "1752 Alcatraz Adeline\nBerkeley, CA 94704", "http://g.co/maps/mue6k", :target => :blank %>
+			<p><%= link_to "1752 Alcatraz, Berkeley, CA 94704", "http://g.co/maps/mue6k", :target => :blank %></p>
 		</address>
+		
+		<span class="header-info-h"><p>Open: Mon-Fri, 4-8PM</p></span>
+		
+		<span class="header-info-h"><p>We'd love to hear from you!</p></span>
+		<p>Colin Moss, Director: 415.606.3189 - <%= mail_to "colin.moss@biketopiaworkshop.org", "E-mail", :subject => "Question about Biketopia" %></p>
 		
 		<div id="social">
 		  <%= link_to "Facebook", "https://www.facebook.com/BiketopiaBerkeley", :class => "icon-facebook", :target => :blank %>
 		  <%= link_to "Twitter", "https://twitter.com/#!/BiketopiaCycles", :class => "icon-twitter", :target => :blank %>
 		  <%= link_to "Yelp", "http://www.yelp.com/biz/biketopia-community-workshop-berkeley-2", :class => "icon-yelp", :target => :blank %>
 		</div>
-		
-		<!--- Add: gmap on hover of address, social media icons (font awesome) --->
 
-		<a>contact us</a>
-		<%= mail_to "colin.moss@biketopiaworkshop.org", "e-mail", :subject => "Question about Biketopia" %><br />
-		415.606.3189
 	</aside>
 	
 <% if false %>
